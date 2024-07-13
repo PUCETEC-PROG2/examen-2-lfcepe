@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}CinePremium{% endblock title %} 
+{% block content %}
+    <h2>{{movie}}</h2>
+    <p>Has elegido la pelicula <strong>{{ movie | capfirst }}</strong></p>
+    <h3>Informacion de la pelicula</h3>
+    <ul>
+        <li>Año de publicacion: {{ movie.year }}</li>
+        <li>Director de la pelicula: {{ movie.director }}</li>
+        <li>Género: {{ movie.gender }}</li>
+        <li>Sinopsis: {{ movie.synopsis }}</li>
+    </ul>
+{% endblock content %} 

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}CinePremium{% endblock title %}
+{% block content %}
+    <p class="p-2">Peliculas disponibles en la cartelera</p>
+    <ul class="list-group"> 
+        {% for movie in movies %}
+        <li class="list-group-item">
+            <a href="movie/{{movie.pk}}">{{ movie | capfirst }}</a>
+            <p>{{ movie.year }} </p>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
